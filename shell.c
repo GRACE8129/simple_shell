@@ -2,14 +2,14 @@
 
 int main(void)
 {
-	char command[];
+	char input[250];
 
 	while (true)
 	{
 
 		view_prompt();
-		read_command(command, sizeof(command));
-		execute_command(command);
+		read_input(input, sizeof(input));
+		execute_input(input);
 
 	}
 

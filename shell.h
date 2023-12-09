@@ -6,10 +6,12 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 void view_prompt(void);
 void circuitminds_print(const char *text);
-void read_command(char *command, size_t size);
-void execute_command(const char *command);
+void read_input(char *input, size_t size);
+void execute_input(const char *input);
 
 #endif /*SHELL_H */

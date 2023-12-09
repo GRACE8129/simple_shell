@@ -1,15 +1,15 @@
-#include <stdio>
+#include <stdio.h>
 #include <string.h>
 
 int main(void)
 
 {
-	char command[] = "i love coding";
+	char input[] = "i love coding";
 
-	char *taken;
+	char *token;
 	char *delim = " ";
 
-	token = strtok(command,delim);
+	token = strtok(input, delim);
 
 	while (token != NULL)
 	{

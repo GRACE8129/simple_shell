@@ -1,5 +1,10 @@
 #include "shell.h"
 
+/**
+  * execute_input - executes a giving input command.
+  *  @input: The command to be executed.
+  */
+
 void execute_input(const char *input)
 {
 	pid_t child_pid = fork();
@@ -9,12 +14,16 @@ void execute_input(const char *input)
 		perror("fork");
 		exit(EXIT_FAILURE);
 	}
-	else if (pid == 0)
+	else if (child_pid == 0)
 	{
-		if(execlp(input, input, (char *)NULL) == -1)
+		if (execlp(input, input, (char *)NULL) == -1)
 		{
 			perror("execlp");
 			exit(EXIT_FAILURE);
 		}
 	}
-
+	else
+	{
+		wait(NULL);
+	}
+}
