@@ -1,7 +1,7 @@
 #include <stdio>
 #include <string.h>
 
-int main()
+int main(void)
 
 {
 	char command[] = "i love coding";
@@ -13,7 +13,9 @@ int main()
 
 	while (token != NULL)
 	{
-		printf("token: %s\n", token);
+		write(STDOUT_FILENO, "token: ", 7);
+		write(STDOUT_FILENO, token, strlen(token));
+		write(STDOUT_FILENO, "\n", 1);
 
 		token = strtok(NULL, delim);
 	}
