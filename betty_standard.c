@@ -5,7 +5,7 @@
   *
   * Return: Always 0 (success)
   */
-/*
+
 int main(void)
 {
 	char *message = "Hello, Betty! \n";
@@ -17,4 +17,3 @@ int main(void)
 	return (0);
 
 }
-*/
