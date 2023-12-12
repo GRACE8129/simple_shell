@@ -10,8 +10,13 @@ int main(void)
 
 		view_prompt();
 		read_input(input, sizeof(input));
-		execute_input(input);
 
+		if (is_builtin(input))
+		{
+			execute_builtin(input);
+			continue;
+		}
+		execute_input(input);
 	}
 
 	return (0);

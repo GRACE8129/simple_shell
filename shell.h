@@ -21,5 +21,8 @@ void execute_input(const char *input);
 void execute_builtin(const char *input);
 void execute_external(const char *input, char *arguments[]);
 
+/* declaration for is_builtin function*/
+bool is_builtin(const char *input);
+
 
 #endif /*SHELL_H */
