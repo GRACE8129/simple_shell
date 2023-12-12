@@ -1,23 +1,21 @@
-#include <stdio.h>
-#include <string.h>
+#include "shell.h"
 
-int main(void)
+/**
+  * execute_external - Executes external commands.
+  * @input: The command to be executed.
+  * @arguments: The array of command and arguments.
+  */
 
+void execute_external(const char *input, char *arguments[])
 {
-	char input[] = "i love coding";
+	int arg_count = 0;
 
-	char *token;
-	char *delim = " ";
+	char *token = strtok((char *)input, " ");
 
-	token = strtok(input, delim);
-
-	while (token != NULL)
+	while (token != NULL && arg_count < MAX_NUM_ARGS - 1)
 	{
-		write(STDOUT_FILENO, "token: ", 7);
-		write(STDOUT_FILENO, token, strlen(token));
-		write(STDOUT_FILENO, "\n", 1);
-
-		token = strtok(NULL, delim);
+		arguments[arg_count++] = token;
+		token = strtok(NULL, " ");
 	}
-	return (0);
+	arguments[arg_count] = NULL;
 }
