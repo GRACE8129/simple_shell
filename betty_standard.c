@@ -1,19 +1,16 @@
 #include "shell.h"
 
 /**
-  * main - Entry point of the program
+  * main - Print Hello, Betty!
   *
-  * Return: Always 0 (success)
+  * Return: 0
   */
 
 int main(void)
 {
-	char *message = "Hello, Betty! \n";
-	ssize_t len = 13;
+	char *string = "Hello, Betty!";
 
-	if (write(1, message, len) != len)
-		return (1);
-
+	if (*string != '\0')
+		puts(string);
 	return (0);
-
 }

@@ -9,5 +9,5 @@
 void view_prompt(void)
 
 {
-	circuitminds_print("circuit_shell$");
+	circuitminds_print("circuit_shell$ ");
 }
