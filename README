@@ -1,0 +1,12 @@
+## Custom Shell
+
+Custom Shell is a simple shell implementation written in C.
+This project aims to provide a basic command-line interface with support for
+executing external commands, built-in commands, handling command-line arguments, and more.
+
+## Features
+
+- **Command Execution:** Execute external commands with or without command-line arguments.
+- **Built-in Commands:** Supports built-in commands such as `exit` and `env`.
+- **Command-Line Arguments:** Handle command-line arguments for external commands.
+- **Graceful Exit:** Implement a graceful exit for the shell.
