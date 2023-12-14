@@ -8,12 +8,9 @@
 
 int main(void)
 {
-	char *string = "Hello, Betty!\n";
-	ssize_t len = strlen(string);
+	char *string = "Hello, Betty!";
 
-
-	if ((write(1, string, len)) != len)
-		return (1);
-
+	if (*string != '\0')
+		puts(string);
 	return (0);
 }
