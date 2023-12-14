@@ -13,12 +13,14 @@
 #define MAX_ARG_SIZE 64
 #define MAX_NUM_ARGS 64
 
+/* Declare the extern variable */
+extern char **environ;
 
 void view_prompt(void);
-void circuitminds_print(const char *text);
+void jag_print(const char *text);
 void read_input(char *input, size_t size);
 void execute_input(const char *input);
-void execute_builtin(const char *input);
+void execute_builtin(const char *input, char **environ);
 void execute_external(const char *input, char *arguments[]);
 
 /* declaration for is_builtin function*/
