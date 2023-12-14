@@ -21,6 +21,7 @@ void execute_input(const char *input)
 		/* Child process */
 		/* Tokenize the input command */
 		char *arguments[MAX_NUM_ARGS];
+
 		execute_external(input, arguments);
 		/* Attempt to execute the command */
 		execvp(arguments[0], arguments);
@@ -37,12 +38,12 @@ void execute_input(const char *input)
 		if (WIFEXITED(status))
 		{
 			/* Print the exit status if needed */
-			printf("Child exited with status %d\n", WEXITSTATUS(status));
+			/* printf("Child exited with status %d\n", WEXITSTATUS(status)); */
 		}
 		else if (WIFSIGNALED(status))
 		{
 			/* Print information about the signal that caused the child to terminate */
-			printf("Child process terminated by signal %d\n", WTERMSIG(status));
+			/* printf("Child process terminated by signal %d\n", WTERMSIG(status)); */
 		}
 	}
 }
