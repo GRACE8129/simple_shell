@@ -1,5 +1,10 @@
 #include "shell.h"
 
+/**
+ * main - execute the shell.
+ *
+ * Return: 0
+ */
 
 int main(void)
 {
