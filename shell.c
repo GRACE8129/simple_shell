@@ -13,7 +13,7 @@ int main(void)
 
 		if (is_builtin(input))
 		{
-			execute_builtin(input);
+			execute_builtin(input, environ);
 			continue;
 		}
 		execute_input(input);
