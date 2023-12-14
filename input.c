@@ -11,12 +11,12 @@ void read_input(char *input, size_t size)
 	{
 		if (feof(stdin))
 		{
-			circuitminds_print("\n");
+			jag_print("\n");
 			exit(EXIT_SUCCESS);
 		}
 		else
 		{
-			circuitminds_print("Error reading input.\n");
+			jag_print("Error reading input.\n");
 			exit(EXIT_FAILURE);
 		}
 	}
