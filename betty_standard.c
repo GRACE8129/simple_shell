@@ -5,7 +5,7 @@
   *
   * Return: 0
   */
-
+/*
 int main(void)
 {
 	char *string = "Hello, Betty!\n";
@@ -17,3 +17,4 @@ int main(void)
 
 	return (0);
 }
+*/
