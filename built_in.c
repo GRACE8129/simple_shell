@@ -1,25 +1,27 @@
 #include "shell.h"
 
+
 /**
- * execute_builtin - Execute built-in commands.
- * @input: The command to be executed.
- * @environ: The environment variable.
- */
-void execute_builtin(const char *input, char **environ)
+  * execute_builtin - Execute built-in commands.
+  * @input: The command to be executed.
+  */
+
+void execute_builtin(const char *input)
 {
 	if (strcmp(input, "exit") == 0)
 	{
-		jag_print("Exiting shell. \n");
+		circuitminds_print("Exiting shell. \n");
 		exit(EXIT_SUCCESS);
 	}
 	else if (strcmp(input, "env") == 0)
 	{
-		char **env = environ;
+		extern char **environ;
 
+		char **env = environ;
 		while (*env != NULL)
 		{
-			jag_print(*env);
-			jag_print("\n");
+			circuitminds_print(*env);
+			circuitminds_print("\n");
 			env++;
 		}
 	}
